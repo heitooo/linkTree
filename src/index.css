@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.light {
+  background: rgb(101, 98, 150);
+  background: linear-gradient(
+    90deg,
+    rgba(101, 98, 150, 1) 0%,
+    rgba(128, 128, 172, 1) 40%,
+    rgba(169, 210, 218, 1) 100%
+  );
+  color: black;
+  height: 100vh;
+}
+
+.dark {
+  background: rgb(50, 49, 62);
+  background: linear-gradient(
+    90deg,
+    rgba(50, 49, 62, 1) 0%,
+    rgba(130, 130, 177, 1) 63%,
+    rgba(4, 85, 101, 1) 100%
+  );
+  color: white;
+  height: 100vh;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title-about {
+  color: red;
+}
