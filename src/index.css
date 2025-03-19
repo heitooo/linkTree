@@ -6,25 +6,17 @@
 
 .light {
   background: rgb(101, 98, 150);
-  background: linear-gradient(
-    90deg,
-    rgba(101, 98, 150, 1) 0%,
-    rgba(128, 128, 172, 1) 40%,
-    rgba(169, 210, 218, 1) 100%
-  );
-  color: black;
+  background: -webkit-linear-gradient(90deg, #e461ae, #f291a9, #efc0be);
+  background: linear-gradient(90deg, #e461ae, #f291a9, #efc0be);
+  color: #2c2c2c;
   height: 100vh;
 }
 
 .dark {
   background: rgb(50, 49, 62);
-  background: linear-gradient(
-    90deg,
-    rgba(50, 49, 62, 1) 0%,
-    rgba(130, 130, 177, 1) 63%,
-    rgba(4, 85, 101, 1) 100%
-  );
-  color: white;
+  background: -webkit-linear-gradient(90deg, #dc5c7d, #b15b67, #875758);
+  background: linear-gradient(90deg, #dc5c7d, #b15b67, #875758);
+  color: #f0ffff;
   height: 100vh;
 }
 

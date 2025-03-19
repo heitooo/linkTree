@@ -52,7 +52,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -64,7 +63,7 @@ input:checked + .slider:before {
 #profileImg {
   width: 112px;
   height: 112px;
-  border-radius: 50%;
+  border-radius: 100%;
 }
 
 .tittle {
@@ -87,17 +86,82 @@ input:checked + .slider:before {
   width: 540px;
   height: 56px;
   border-radius: 8px;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: transparent;
+  border: none;
+  background-color: rgba(52, 52, 52, 0.2);
   color: white;
   cursor: pointer;
+}
+
+.botao:hover {
+  opacity: 50%;
+  background-color: black;
+  transition: 0.8;
 }
 
 .container {
   width: 100vw;
   height: 100vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 24px, 0;
+}
+
+.light {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dark {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos do container do switch */
+.toggle-container {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 2px;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Estilo do botão deslizante */
+.toggle-switch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Posição do botão no tema claro */
+.light .toggle-switch {
+  left: 5px;
+}
+
+/* Posição do botão no tema escuro */
+.dark .toggle-switch {
+  transform: translateY(-50%) translateX(25px);
 }
