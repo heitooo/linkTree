@@ -1,17 +1,31 @@
 import { useTheme } from "../../context/ThemeContext";
-import { Link } from "react-router";
-import { Sun, Moon, Instagram, Github, Youtube } from "lucide-react";
-import profileImg from "../../assets/patrick.jpeg";
+import { Sun, Moon, Instagram, Github, Youtube, Linkedin } from "lucide-react";
+import { useState, useEffect } from "react";
+import { api } from "../../services/api";
 import "../home/styles.css";
 
 export function Home() {
   const { theme, toggleTheme } = useTheme();
+  const [user, setUser] = useState([]);
+
+  useEffect(() => {
+    async function getUserData() {
+      try {
+        const response = await api.get("/users/heitoo");
+
+        setUser(response.data);
+      } catch (error) {
+        console.log("Erro ao buscar os dados do usuário", error);
+      }
+    }
+    getUserData();
+  }, []);
 
   return (
     <div className="container">
       <div id="content">
-        <img id="profileImg" src={profileImg} width={112} alt="" />
-        <p className="tittle">@heittski</p>
+        <img id="profileImg" src={user.avatar_url} width={112} alt="" />
+        <p className="tittle">@{user.login}</p>
 
         <div className="toggle-container" onClick={toggleTheme}>
           <div
@@ -33,9 +47,18 @@ export function Home() {
         </div>
 
         <div className="links">
-          <Instagram />
-          <Github />
-          <Youtube />
+          <a href="https://github.com/heitooo">
+            <Github />
+          </a>
+          <a href="https://www.instagram.com/">
+            <Instagram />
+          </a>
+          <a href="https://www.youtube.com/">
+            <Youtube />
+          </a>
+          <a href="linkedin.in">
+            <Linkedin />
+          </a>
         </div>
       </div>
     </div>

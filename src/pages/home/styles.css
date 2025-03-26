@@ -127,7 +127,6 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
-/* Estilos do container do switch */
 .toggle-container {
   width: 50px;
   height: 25px;
@@ -141,7 +140,6 @@ input:checked + .slider:before {
   transition: background-color 0.3s ease-in-out;
 }
 
-/* Estilo do botão deslizante */
 .toggle-switch {
   width: 20px;
   height: 20px;
@@ -156,12 +154,20 @@ input:checked + .slider:before {
   justify-content: center;
 }
 
-/* Posição do botão no tema claro */
 .light .toggle-switch {
   left: 5px;
 }
 
-/* Posição do botão no tema escuro */
 .dark .toggle-switch {
   transform: translateY(-50%) translateX(25px);
+}
+
+.links {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.links a {
+  color: black;
 }
